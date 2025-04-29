@@ -1,0 +1,290 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --- Light Mode (Based on Prompt: #F5F5F5 BG, #2196F3 Primary, #008080 Accent) --- */
+    --background: 0 0% 96%; /* #F5F5F5 */
+    --foreground: 240 10% 3.9%; /* Dark Gray/Black for text */
+    --card: 0 0% 96%; /* #F5F5F5 - Card BG same as main BG */
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%; /* White popovers */
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 217 91% 54%; /* #2196F3 */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 0 0% 90%; /* Light Gray */
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 0 0% 85%; /* Slightly darker gray */
+    --muted-foreground: 240 5% 55%; /* Mid Gray */
+    --accent: 180 100% 25%; /* Teal #008080 */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 87%; /* Light Gray Border */
+    --input: 0 0% 87%; /* Light Gray Input */
+    --ring: 180 100% 25%; /* Teal Accent Ring */
+    --notification: 180 100% 25%; /* Teal for snackbar/notifications */
+    --notification-foreground: 0 0% 100%; /* White */
+
+    /* --- Chart Colors (example, adjust as needed) --- */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* --- Radius --- */
+    --radius: 0.75rem; /* 12px default radius for cards */
+
+    /* --- Sidebar Colors (Not actively used in this layout) --- */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* --- Dark Mode (Based on Prompt: #121212 BG, #2196F3 Primary, #008080 Accent) --- */
+    --background: 0 0% 7%; /* #121212 */
+    --foreground: 0 0% 88%; /* #E0E0E0 */
+    --card: 0 0% 12%; /* #1E1E1E - Darker Card BG */
+    --card-foreground: 0 0% 88%; /* #E0E0E0 */
+    --popover: 0 0% 12%; /* #1E1E1E */
+    --popover-foreground: 0 0% 88%; /* #E0E0E0 */
+    --primary: 217 91% 54%; /* #2196F3 */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 0 0% 15%; /* Slightly lighter dark gray */
+    --secondary-foreground: 0 0% 88%; /* #E0E0E0 */
+    --muted: 0 0% 25%; /* Darker Gray */
+    --muted-foreground: 0 0% 65%; /* Light Gray */
+    --accent: 180 100% 25%; /* Teal #008080 */
+    --accent-foreground: 0 0% 98%; /* White text on accent */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 25%; /* Gray Border */
+    --input: 0 0% 25%; /* Gray Input */
+    --ring: 180 100% 25%; /* Teal Accent Ring */
+    --notification: 180 100% 25%; /* Teal for snackbar/notifications */
+    --notification-foreground: 0 0% 98%; /* White */
+
+    /* --- Chart Colors (Dark Mode Example) --- */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+     /* --- Sidebar Colors (Dark Mode Example - Not actively used) --- */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border transition-colors duration-300 ease-in-out; /* Added transition */
+  }
+  body {
+     /* Use font-sans (mapped to Poppins) */
+     /* Use --background for the main page background */
+    @apply bg-background text-foreground transition-colors duration-300 ease-in-out font-sans;
+    min-height: 100vh;
+    /* Prevent text selection on mobile */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+   /* Use Poppins Bold for headings (h1-h6) - 32sp equivalent (approx text-3xl/4xl) */
+   h1 { @apply font-sans font-bold text-3xl md:text-4xl; } /* ~30-36px */
+   h2 { @apply font-sans font-bold text-2xl md:text-3xl; } /* ~24-30px */
+   h3 { @apply font-sans font-bold text-xl md:text-2xl; } /* ~20-24px */
+   h4 { @apply font-sans font-bold text-lg md:text-xl; } /* ~18-20px */
+   h5 { @apply font-sans font-bold text-base md:text-lg; } /* ~16-18px */
+   h6 { @apply font-sans font-bold text-sm md:text-base; } /* ~14-16px */
+
+   /* Use Poppins Regular for body text - 18sp equivalent (approx text-lg) */
+   p, span, div, button, input, textarea, label, li { /* Apply to common text elements */
+      @apply font-sans text-lg leading-relaxed; /* ~18px */
+   }
+   /* Override specific utility classes if needed */
+    .text-base { @apply text-lg; }
+    .text-sm { @apply text-base; }
+    .text-xs { @apply text-sm; }
+}
+
+/* --- Custom Styles --- */
+
+/* Ripple Effect for Buttons (keep as is) */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: hsl(var(--accent) / 0.5); /* Use accent color ripple */
+  transform: scale(0);
+  animation: ripple-animation 0.6s ease-in-out; /* Use easing */
+  pointer-events: none; /* Ensure it doesn't block clicks */
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+
+/* Sheet styles */
+.sheet-content-background {
+  /* Use card background for sheet content for mobile feel */
+  @apply bg-card;
+}
+/* Header uses primary color */
+.sheet-header-background {
+  @apply bg-primary text-primary-foreground;
+}
+
+
+/* Animations */
+@layer utilities {
+  .animate-pulse-mic {
+    animation: pulse-mic 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .animate-fade-in {
+      animation: fade-in 300ms ease-out forwards;
+  }
+   .animate-staggered-fade-in {
+       opacity: 0; /* Start hidden */
+       animation: fade-in 500ms ease-out forwards;
+   }
+  .animate-bounce-click {
+      animation: bounce-click 200ms ease-in-out forwards;
+  }
+  .animate-glow-border-dark {
+      animation: glow-border-dark 1.5s ease-in-out infinite alternate;
+  }
+  .animate-blink {
+       animation: blink 1s step-start infinite;
+   }
+  .fade-in-button {
+        opacity: 0;
+        animation: fade-in-simple 300ms ease-out forwards;
+        animation-delay: 100ms; /* Slight delay */
+   }
+   /* Shimmer animation for loading skeletons */
+    .animate-shimmer {
+        background-image: linear-gradient(
+            90deg,
+            hsl(var(--muted) / 0.8) 0%,
+            hsl(var(--muted) / 0.4) 50%,
+            hsl(var(--muted) / 0.8) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite linear;
+    }
+    .dark .animate-shimmer {
+         background-image: linear-gradient(
+            90deg,
+            hsl(var(--muted) / 0.6) 0%,
+            hsl(var(--muted) / 0.3) 50%,
+            hsl(var(--muted) / 0.6) 100%
+        );
+    }
+
+}
+
+@keyframes pulse-mic {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-simple {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce-click {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow-border-dark {
+  from { box-shadow: 0 0 3px hsl(var(--accent) / 0.6), 0 0 6px hsl(var(--accent) / 0.4); }
+  to { box-shadow: 0 0 6px hsl(var(--accent) / 0.8), 0 0 12px hsl(var(--accent) / 0.6); }
+}
+
+@keyframes blink {
+   50% { border-color: transparent; }
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+
+/* Card Styling - Use card color */
+.translation-card {
+  @apply bg-card text-card-foreground shadow-md rounded-xl border border-border/50; /* 12px radius = rounded-xl */
+  /* Remove hover lift/shadow increase for simpler mobile look */
+}
+
+/* Teal border on focus */
+.translation-card:focus-within {
+   @apply ring-2 ring-accent ring-offset-2 ring-offset-background border-accent;
+}
+
+/* Dark mode glow remains */
+.dark .dark-mode-glow {
+   animation: glow-border-dark 1.5s ease-in-out infinite alternate;
+}
+.dark .button-glow-dark:is(:active, :focus-visible, [data-state=open], [aria-pressed=true]) {
+   animation: glow-border-dark 1.5s ease-in-out infinite alternate;
+}
+.dark .textarea-glow-dark:is(:focus-within, [data-loading=true]) {
+    @apply ring-2 ring-accent ring-offset-2 ring-offset-background border-accent; /* Use ring instead of animation for focus */
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+  @apply fixed bottom-6 right-6 z-50;
+  @apply h-14 w-14 rounded-full shadow-lg; /* Standard FAB size */
+  @apply flex items-center justify-center;
+  @apply bg-accent text-accent-foreground; /* Teal background */
+  @apply transition-transform duration-200 ease-in-out;
+  @apply active:scale-95; /* Simple scale on tap */
+}
+
+.fab svg {
+  @apply h-6 w-6; /* Adjust icon size as needed */
+}
+
+/* Hide swap button on smaller screens where FAB is present */
+@media (max-width: 767px) {
+  .swap-button-container {
+    @apply hidden;
+  }
+}
+/* Show FAB only on smaller screens */
+@media (min-width: 768px) {
+  .fab {
+    @apply hidden;
+  }
+}
