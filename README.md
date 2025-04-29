@@ -48,5 +48,5 @@ TranslateX is a web app for real-time text translation across 10 languages using
    - Create a `.env` file in the root directory.  
    - Add your Google Translate API key:
      ```
-     TRANSLATE_API_KEY=your-key
+     GOOGLE_GENAI_API_KEY=your-key
      ```
