@@ -25,6 +25,12 @@ https://github.com/krishudev/Rishu_Kumar_CSE-AIML1_TranslateX/blob/main/Project_
 
 ---
 
+## Presentation
+
+https://github.com/krishudev/Rishu_Kumar_CSE-AIML1_TranslateX/blob/main/Project_Report_TranslateX.docx
+
+---
+
 ## Github Repository
 
 https://github.com/krishudev/Rishu_Kumar_CSE-AIML1_TranslateX/tree/main
