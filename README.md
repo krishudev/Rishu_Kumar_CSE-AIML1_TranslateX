@@ -18,6 +18,9 @@ https://drive.google.com/file/d/1HoPdK_xaaieaJNKi2w52pdK1aOgJMsYc/view?usp=shari
 
 ---
 
+## Project Report
+https://github.com/krishudev/Rishu_Kumar_CSE-AIML1_TranslateX/blob/main/Project_Report_TranslateX.docx
+
 ## Tech Used
 
 - **Front-End:** HTML, CSS, JavaScript, React  
