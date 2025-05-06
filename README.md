@@ -14,7 +14,7 @@ TranslateX is a web app for real-time text translation across 10 languages using
 ---
 
 ## Video
-
+https://drive.google.com/file/d/1HoPdK_xaaieaJNKi2w52pdK1aOgJMsYc/view?usp=sharing
 
 ---
 
