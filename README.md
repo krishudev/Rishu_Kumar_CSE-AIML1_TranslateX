@@ -1,6 +1,6 @@
 # TranslateX
 
-TranslateX is a web app for real-time text translation across 10 languages using the Google Translate API.
+TranslateX is a dynamic web application designed for seamless real-time text translation, supporting 10 languages through the powerful Google Translate API. With a user-friendly interface built using React and styled with Tailwind CSS, it offers context-aware translations, automatic language detection, and file-based translation for .txt files. TranslateX ensures fast, reliable, and accessible translation services, making it ideal for users seeking efficient multilingual communication. Perfect for personal, educational, or professional use, this app delivers a smooth and responsive experience across devices.
 
 ---
 
@@ -14,12 +14,22 @@ TranslateX is a web app for real-time text translation across 10 languages using
 ---
 
 ## Video
+
 https://drive.google.com/file/d/1HoPdK_xaaieaJNKi2w52pdK1aOgJMsYc/view?usp=sharing
 
 ---
 
 ## Project Report
+
 https://github.com/krishudev/Rishu_Kumar_CSE-AIML1_TranslateX/blob/main/Project_Report_TranslateX.docx
+
+---
+
+## Github Repository
+
+https://github.com/krishudev/Rishu_Kumar_CSE-AIML1_TranslateX/tree/main
+
+---
 
 ## Tech Used
 
